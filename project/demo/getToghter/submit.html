@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" /> 
+		<link rel="stylesheet" href="css/submit.css" />
+		<script type="text/javascript" src="js/jquery-2.2.4.min.js" ></script>
+		<script type="text/javascript" src="js/bootstrap.min.js" ></script>
+		<script type="text/javascript">
+			function sendok(){
+				if(userid.value!="" && userpwd.value!=""){		
+					localStorage.userid=userid.value;
+					sessionStorage.userpwd=userpwd.value;
+					return true;
+				}else{
+					alert("请输入帐号");
+					return false;
+				}
+			
+				}
+			
+			function isload(){
+				if(localStorage.userid) 
+					userid.value=localStorage.userid;
+				
+				
+			}
+
+
+</script>
+	</head>
+	<body style="background-image: url(img/bg1.png);" >
+		<!--图片大小需要改-->
+		<nav class="nav navbar-default navbar-fixed-top" role="navigation">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button class="navbar-toggle"data-toggle="collapse" toggle-target=".navbar-collapse" >
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="navbar-header">
+					<img src="img/aa.png" class="img-responsive" style="width: 60px;height: 60px;margin-right: 20px;margin-top: -10%;"/>
+				</div>
+				<div class="collapse navbar-collapse"style="margin-left: 10% ;" >
+					<ul class="nav navbar-nav"style="font-size: large;"> 
+						<li><a href="face.html"><span class="glyphicon glyphicon-home"></span>&nbsp;<strong>首页</strong></a></li>
+						<li><a href="comchild.html"><span class="glyphicon glyphicon-circle-arrow-down"></span><strong>众筹系列</strong></a></li>
+						<li><a href="products.html"><span class="glyphicon glyphicon-book"></span>&nbsp;<strong>产品与服务</strong></a></li>
+						<li class="active"><a href="ours.html"><span class="glyphicon glyphicon-heart"></span>&nbsp;<strong>关于我们</strong></a></li>
+					</ul>
+					<div class="navbar-form navbar-right">
+						<a href="submit.html" class="navbar-link"><strong>登 录</strong></a>&nbsp;
+						<a href="submit.html" class="navbar-link"><strong>注 册</strong></a>&nbsp;
+						<input type="text" class="form-control" placeholder="输入产品类型"/>
+						<button class="btn btn-primary">搜 索</button>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+		<div style="margin-left:60%;width:600px;margin-top:20px;height:780px;background-color:#CCCCCC;opacity:0.93; border-radius: 8px;">
+			<h4 style="margin-left: 15%;padding-top: 50px;font-family:arial;color: orange;"><strong>给自己一个机会,等待你的加入一起携手创未来！</strong></h4>
+			<h2  style="margin-left: 30%; font-family:'arial narrow'"><span class="glyphicon glyphicon-user"></span>&nbsp;用户登录</h2>
+			<div class="page-header"style="margin-top: -10px; "></div>
+			
+			<form class="form-horizontal" id="formid"style="margin-left: 13%;" method="post" action="products.html" onsubmit="return sendok();">
+				<div class="form-group">
+					<div  class="navbar-form">
+						用 户 名：<input type="text" class="form-control" placeholder="输入用户名/手机号 /邮箱" id="userid"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="navbar-form">
+						密 &nbsp;码：<input type="text" class="form-control" placeholder="请输入正确密码" id="userpwd" style="width: 300px;"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="navbar-form">
+						<input type="text"placeholder="输入手机验证码" style="margin-left: 12%;"/>
+						<a href="#">点击获取短信验证码</a><span class="glyphicon glyphicon-phone"></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="navbar-form">
+						<input type="text"placeholder="输入图片验证码" style="margin-left: 12%;"/> 
+						<span><img src="img/key.png"><a href="#">看不清？</a></span>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="navbar-form">
+						<input type="checkbox" name="" id="" value="" />&nbsp;记住我？
+						<span style="margin-left: 55%;"></span>
+						<a href="#">忘记密码？</a>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-md-5" style="margin-left: 25%;">
+						<button class="btn btn-primary"type="submit"><span class="glyphicon glyphicon-send"></span>&nbsp;登录</button>
+						<button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-arrow-up" ></span>&nbsp;注 册</button>
+					
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-md-12">
+						————————————第三方登录———————————
+					</div>
+					<div style="margin: 10px 28% ">
+						<a href="#"><img src="img/wechart.png" /></a>
+						<a href="#"><img src="img/weibo.png" style="margin-left: 20px;"/></a>
+						<a href="#"><img src="img/QQ.png" style="margin-left: 20px;"/></a>
+					</div>
+				</div>
+				<img src="img/code.jpg" style="width: 120px;height: 120px; margin-left: 55%;"/>
+			</form>
+		</div>	
+		<!--<div style="height: 100px;"></div>-->
+	<footer>
+			<div id="footer">
+				<div  style="height: 50px;background-color: black;font-size:1.2em;padding: 18px 100px;">
+					<ul class="nav navbar-nav" style="margin-left: "> 
+						<li >大河集团众筹联盟</li>
+						<li style="margin-left: 80px;">0312-8888888</li>
+						<li style="margin-left: 80px;">copyright &amp;：大河集团众筹联盟</li>
+						<li style="margin-left: 80px;">冀ICP备&nbsp;0620161</li>
+						<li style="padding-left: 80px;">大河集团尖浪科技支持</li>
+					</ul> 
+				</div>
+			</div>
+		</footer>	
+	</body>
+</html>
